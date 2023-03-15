@@ -5,6 +5,8 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.util.ArrayList;
 
+import static java.lang.Character.isDigit;
+
 //3. Создать список типа ArrayList<String>. Поместить в него как строки, так и целые числа. Пройти по списку,
 // найти и удалить целые числа.
 public class Task3 {
@@ -21,9 +23,8 @@ public class Task3 {
         for (int i = 0; i<arr.size();i++) {
             String Integer;
             Integer = null;
-            if (arr.get(i) == Integer) {
-                arr.remove(i);
-            }
+//            if (arr.get(i) == Integer) {
+                if (isDigit(java.lang.Integer.parseInt(arr.get(i)))) arr.remove(i);
         }
         System.out.println(arr);
     }
